@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -105,14 +105,6 @@ nav ul li a:hover::after {
   box-shadow: 0 0 20px #00aaff, 0 0 40px #00aaff;
 }
 
-/* Tagline Under CTA */
-.tagline {
-  margin-top: 2rem;
-  font-size: 1.2rem;
-  color: #aaa;
-  animation: fadeIn 1.5s ease-in;
-}
-
 /* PC & Server Sections */
 .build-section {
   padding: 4rem 2rem;
@@ -158,5 +150,5 @@ footer {
 
 @keyframes slideDown {
   from { transform: translateY(-100%); opacity: 0; }
-  to { transform: translateY(0);
-
+  to { transform: translateY(0); opacity: 1; }
+}
