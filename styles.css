@@ -1,3 +1,4 @@
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +11,14 @@ body {
   color: #ffffff;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background-color: #1a1a1a;
+  animation: slideDown 0.8s ease-out;
 }
 
 .logo {
@@ -36,29 +39,52 @@ nav ul li {
 nav ul li a {
   color: #ccc;
   text-decoration: none;
-  transition: color 0.3s;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #00aaff;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
 }
 
 nav ul li a:hover {
   color: #00aaff;
 }
 
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 5rem 2rem;
   background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  animation: fadeIn 1.5s ease-in;
 }
 
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  animation: fadeUp 1s ease-out;
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  animation: fadeUp 1.2s ease-out;
 }
 
+/* CTA Button */
 .cta-button {
   background-color: #00aaff;
   color: #000;
@@ -67,16 +93,36 @@ nav ul li a:hover {
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s;
+  box-shadow: 0 0 10px #00aaff;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .cta-button:hover {
   background-color: #008fcc;
+  box-shadow: 0 0 20px #00aaff, 0 0 40px #00aaff;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
   background-color: #1a1a1a;
   color: #777;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
