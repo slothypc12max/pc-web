@@ -6,6 +6,10 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #0f0f0f;
   color: #ffffff;
@@ -84,7 +88,6 @@ nav ul li a:hover::after {
   animation: fadeUp 1.2s ease-out;
 }
 
-/* CTA Button */
 .cta-button {
   background-color: #00aaff;
   color: #000;
@@ -100,6 +103,37 @@ nav ul li a:hover::after {
 .cta-button:hover {
   background-color: #008fcc;
   box-shadow: 0 0 20px #00aaff, 0 0 40px #00aaff;
+}
+
+/* Tagline Under CTA */
+.tagline {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #aaa;
+  animation: fadeIn 1.5s ease-in;
+}
+
+/* PC & Server Sections */
+.build-section {
+  padding: 4rem 2rem;
+  background-color: #141414;
+  border-top: 1px solid #222;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.build-section h2 {
+  color: #00aaff;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.build-section p {
+  color: #ccc;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 /* Footer */
@@ -124,24 +158,5 @@ footer {
 
 @keyframes slideDown {
   from { transform: translateY(-100%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-.description {
-  max-width: 800px;
-  margin: 2rem auto 0;
-  padding: 1rem;
-  font-size: 1.05rem;
-  color: #ccc;
-  animation: fadeIn 2s ease-in;
-}
+  to { transform: translateY(0);
 
-.description h2 {
-  font-size: 2rem;
-  color: #00aaff;
-  margin-bottom: 1rem;
-}
-
-.description p {
-  margin-bottom: 1.2rem;
-  line-height: 1.6;
-}
