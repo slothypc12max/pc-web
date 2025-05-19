@@ -126,3 +126,22 @@ footer {
   from { transform: translateY(-100%); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+.description {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  padding: 1rem;
+  font-size: 1.05rem;
+  color: #ccc;
+  animation: fadeIn 2s ease-in;
+}
+
+.description h2 {
+  font-size: 2rem;
+  color: #00aaff;
+  margin-bottom: 1rem;
+}
+
+.description p {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
